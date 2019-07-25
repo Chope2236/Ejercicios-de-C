@@ -8,12 +8,10 @@ int main(){
     printf("Elija Un Numero: ");
     scanf("%d",&basta);
     while (multiplosencontrados != basta){
-        if (actual%3 == 0){
-            if (actual%5 != 0){
+        if ((actual%3 == 0) && (actual%5 != 0)){
                 multiplosencontrados = multiplosencontrados+1;
                 printf("Hay %d Multiplos Encontrados Y El Multiplo Es: %d\n", multiplosencontrados , actual);  
-            }
         }
-        actual = actual+1;
+        actual++;
     }
 }
