@@ -16,9 +16,9 @@ int main(){
     }
     if (a > b){
         printf ("A es mayor que B");
-
     }
-    if (b > a){
+    else
+    {
         printf ("B es mayor que A");
     }
 }
