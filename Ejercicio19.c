@@ -11,8 +11,7 @@ int main(){
         if (actual%3 == 0){
             if (actual%5 != 0){
                 multiplosencontrados = multiplosencontrados+1;
-                printf("Hay %d Multiplos Encontrados Y El Multiplo Es: %d\n", multiplosencontrados , actual);
-               
+                printf("Hay %d Multiplos Encontrados Y El Multiplo Es: %d\n", multiplosencontrados , actual);  
             }
         }
         actual = actual+1;
