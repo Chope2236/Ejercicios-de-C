@@ -12,40 +12,26 @@ int main(){
 /////////////////////////////////////////////////EQUILATERO//////////////////////////////////////////////////////////////////////
         if (lado1 == lado2)
         {
-            if ((lado2 == lado3) && (lado1 == lado3)){
+            if (lado2 == lado3){
                 printf("Es un triangulo Equilatero.\n");
-            }               
+            }else
+             {
+                printf("Es un triangulo Isosceles.\n");
+             }
+                        
             
-        }
-////////////////////////////////////////////////ESCALENO////////////////////////////////////////////////////////////////////////
-        if (lado1 != lado2)
-        {
-            if ((lado1 != lado3) && (lado2 != lado3))
-            {
-                printf("Es un triangulo Escaleno");
-            }
-            
-            
-        }
-//////////////////////////////////////////////ISOSCELES////////////////////////////////////////////////////////////////////////
-        if ((lado1 == lado2) && (lado3 != lado1))
-        {
-            printf("Es un triangulo Isosceles");
         }else
         {
-            if ((lado2 == lado3) && (lado1 != lado2)){
-            printf("Es un triangulo Isosceles");
+            if (lado2 == lado3){
+                printf("Es un triangulo Isosceles.");
             }else
-        {
-            if ((lado1 == lado3) && (lado2 != lado1))
-            printf("Es un triangulo Isosceles");
-        }
-        }
-        
-        
-        
-        
-        
-        
-        
+            {
+                if (lado1 == lado3){
+                    printf("Es un triangulo Isosceles.");
+                }else
+                {
+                   printf("Es un triangulo Escaleno.");
+                }  
+            }  
+        }   
 }
