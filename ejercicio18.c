@@ -32,7 +32,7 @@ int main(void){
         }
 
 
-        } while (sueldo >! 0 );
+        } while (sueldo > 0 );
         
 
         
