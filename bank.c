@@ -16,14 +16,14 @@ int main(){
     printf("\n4. Consulta de Saldo\n");
     input = getch();
 
-    (fptr = fopen("C:\\Users\\Chope\\Desktop\\programacion\\Ejercicios-de-C\\money.txt","r"));
+    (fptr = fopen("money.txt","r"));
     fscanf(fptr,"%d", &saldo);
 
     switch (input)
     {
     //cerrar    
     case '0':
-    end++;
+    end=1;
     break;
 
     //extraccion
@@ -33,14 +33,14 @@ int main(){
         scanf("%d", &montoE);
         if (montoE > saldo){
             printf("\nSaldo insuficiente\n");
-            (fpa = fopen("C:\\Users\\Chope\\Desktop\\programacion\\Ejercicios-de-C\\ultmov.txt","a"));
-            fprintf(fpa,"Extraccion fallida de %d", montoE);
+            (fpa = fopen("ultmov.txt","a"));
+            fprintf(fpa,"Extraccion fallida de %d\n", montoE);
         }else
         {
-            (fpw = fopen("C:\\Users\\Chope\\Desktop\\programacion\\Ejercicios-de-C\\money.txt","w"));
+            (fpw = fopen("money.txt","w"));
             fprintf(fpw, "%d", saldo-montoE);
             printf("\n$%d Han sido extraidos\n", montoE);
-            (fpa = fopen("C:\\Users\\Chope\\Desktop\\programacion\\Ejercicios-de-C\\ultmov.txt","a"));
+            (fpa = fopen("ultmov.txt","a"));
             fprintf(fpa,"Extraccion de %d\n", montoE);
         }
         fclose(fpw);
@@ -55,14 +55,14 @@ int main(){
         scanf("%d", &montoT);
         if(montoT > saldo){
             printf("\nSaldo insuficiente\n");
-            (fpa = fopen("C:\\Users\\Chope\\Desktop\\programacion\\Ejercicios-de-C\\ultmov.txt","a"));
-            fprintf(fpa,"Transferencia fallida de %d", montoT);
+            (fpa = fopen("ultmov.txt","a"));
+            fprintf(fpa,"Transferencia fallida de %d\n", montoT);
         }else
         {
             printf("\n$%d Han sido transferidos\n", montoT);
-            (fpw = fopen("C:\\Users\\Chope\\Desktop\\programacion\\Ejercicios-de-C\\money.txt","w"));
+            (fpw = fopen("money.txt","w"));
             fprintf(fpw, "%d", saldo-montoT);
-            (fpa = fopen("C:\\Users\\Chope\\Desktop\\programacion\\Ejercicios-de-C\\ultmov.txt","a"));
+            (fpa = fopen("ultmov.txt","a"));
             fprintf(fpa,"Transferencia de %d a CBU %d\n",montoT, cbu);
         }
         fclose(fpw);
@@ -73,7 +73,7 @@ int main(){
     case '4':
 
     printf("%d", saldo);
-    (fpa = fopen("C:\\Users\\Chope\\Desktop\\programacion\\Ejercicios-de-C\\ultmov.txt","a"));
+    (fpa = fopen("ultmov.txt","a"));
     fprintf(fpa,"Consulta de saldo\n");
     fclose(fpa);
     fclose(fptr);
