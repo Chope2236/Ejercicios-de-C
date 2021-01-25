@@ -13,7 +13,7 @@ int main(void){
         {
             scanf("%d", &sueldo);
 
-        if (sueldo <= 1999 && sueldo >! 0)
+        if (sueldo <= 1999 && sueldo > 0)
         {
             P++;
         }
@@ -32,7 +32,7 @@ int main(void){
         }
 
 
-        } while (sueldo > 0 );
+        } while (sueldo > 0);
         
 
         
