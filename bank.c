@@ -18,7 +18,7 @@ int main(){
 
     (fptr = fopen("money.txt","r"));
     fscanf(fptr,"%d", &saldo);
-
+    
     switch (input)
     {
     //cerrar    
