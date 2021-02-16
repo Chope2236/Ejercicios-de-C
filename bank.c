@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+
+int consulta(char *nombrearchivo);
+
 int main(){
     
 
@@ -14,11 +17,9 @@ int main(){
     printf("\n2. Transferencia\n");
     printf("\n3. Ultimos Movimientos\n");
     printf("\n4. Consulta de Saldo\n");
-    input = getch();
+    saldo = consulta("money.txt");
 
-    (fptr = fopen("money.txt","r"));
-    fscanf(fptr,"%d", &saldo);
-    
+    input = getch();
     switch (input)
     {
     //cerrar    
@@ -71,12 +72,11 @@ int main(){
 
     //consulta de saldo
     case '4':
-
+    saldo = consulta("money.txt");
     printf("%d", saldo);
-    (fpa = fopen("ultmov.txt","a"));
+    fpa = fopen("ultmov.txt","a");
     fprintf(fpa,"Consulta de saldo\n");
     fclose(fpa);
-    fclose(fptr);
     break;
 
     default:
@@ -87,5 +87,14 @@ int main(){
     
     }
     return 0;
+}
+
+
+int consulta(char *nombrearchivo){
+    int saldo_interno;
+    FILE *fptr = fopen(nombrearchivo,"r");
+    fscanf(fptr,"%d", &saldo_interno);
+    fclose(fptr);
+    return(saldo_interno);
 }
   
