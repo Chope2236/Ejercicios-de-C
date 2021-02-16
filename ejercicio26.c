@@ -35,3 +35,4 @@ int generadorPeso(){
     return(rand() % 1000); 
 }
 
+ 
