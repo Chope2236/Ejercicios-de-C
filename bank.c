@@ -97,4 +97,4 @@ int consulta(char *nombrearchivo){
     fclose(fptr);
     return(saldo_interno);
 }
-  
+   
