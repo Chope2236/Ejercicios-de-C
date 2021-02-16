@@ -15,7 +15,7 @@ int main(){
     asd = consulta("money2.txt");
     printf("\nsegundo valor de asd luego de la consulta = %d", asd);
 }
-
+ 
 
 
 int consulta(char *nombrearchivo){
