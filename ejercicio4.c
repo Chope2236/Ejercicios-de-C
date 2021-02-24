@@ -7,12 +7,7 @@ int main(){
     printf ("Ingrese Un Numero B:\n");
     scanf ("%d",&b);
     while (a == b){
-        printf ("A y B no pueden ser iguales\n");
-        printf ("Ingrese Otro Numero A:\n");
-        scanf ("%d",&a);
-        printf ("Ingrese Otro Numero B:\n");
-        scanf ("%d",&b);
-    
+        printf ("A y B Son Iguales\n");
     }
     if (a > b){
         printf ("A es mayor que B");
