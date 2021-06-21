@@ -12,6 +12,7 @@ int main(){
         if (i==1)
         {
             menor = nl;
+            mayor = nl;
         }   
         if (nl > mayor)
             {
