@@ -44,7 +44,6 @@ int main(void){
             printf ("%d Empleado(s) ganan entre $2000 y $3000\n", PA);
             printf ("%d Empleado(s) ganan entre $3000 y $5000\n", PB);
             printf ("%d Empleado(s) ganan mas de $5000\n", PC);
-            printf("\n\n\nThank you for using Payment Calculator");
             return 0;
         }
         
