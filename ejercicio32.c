@@ -10,5 +10,5 @@ int main()
         x = y;
         y = z;
     }
-    printf("%d", z);
+    printf("%d\n", z);
 }
