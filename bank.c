@@ -69,6 +69,28 @@ int main(){
         fclose(fpw);
         fclose(fpa);
         break;
+    
+    //ultimos movimientos
+    case '3':
+    fptr = fopen("ultmov.txt", "r");
+	if (fptr == NULL)
+	{
+		printf("No hay movimientos. \n");
+	}
+
+	// Read contents from file
+	char c = fgetc(fptr);
+    printf("=============================\n");
+	while (c != EOF)
+	{
+		printf ("%c", c);
+		c = fgetc(fptr);
+    }
+    printf("=============================\n");
+
+
+	fclose(fptr);
+    break;
 
     //consulta de saldo
     case '4':
